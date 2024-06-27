@@ -41,13 +41,13 @@ const Navbar = () => {
     }
 
   return (
-    <div className='navbar root-bg bg-opacity-15 outline outline-1 outline-slate-800'>
-        <div className='navbar-start'>
+    <div className='navbar root-bg bg-opacity-15 fixed z-[1] outline outline-1 outline-slate-800'>
+        <div className='navbar-start mr-10'>
             <a className="btn btn-ghost normal-case text-xl">DAMCAE</a>
         </div>
 
         
-        <div className="navbar-end">
+        <div className="navbar-end flex max-w-fit gap-2">
             <a className="btn btn-outline mr-2">Mudar Tema</a>
 
             {user ? (
@@ -61,7 +61,7 @@ const Navbar = () => {
 
                         <ul
                             tabIndex={0}
-                            className="menu menu-compact dropdown-content z-[1] mt-3 p-2 shadow bg-base-100 rounded-box w-52"
+                            className="menu menu-compact dropdown-content z-[1] mt-3 p-2 shadow bg-base-100 rounded-box  w-52"
                         >
                             <li>
                                 <a href="/profile" className="justify-between">
@@ -77,7 +77,7 @@ const Navbar = () => {
                         </ul>
                     </div>
                 ): (
-                    <div className="dropdown dropdown-end">
+                    <div className="dropdown dropdown-end ">
                         <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                             <div className="w-10 rounded-full">
                                 <div className="avatar placeholder">

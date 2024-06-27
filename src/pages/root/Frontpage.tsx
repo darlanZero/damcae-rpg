@@ -1,4 +1,5 @@
 import FrontPageHeader from "../../components/FrontPageHeader"
+import FrontPageHistory from "../../components/FrontPageHistory"
 
 
 const Frontpage = () => {
@@ -6,6 +7,11 @@ const Frontpage = () => {
     <>
       <section>
         <FrontPageHeader />
+        <div className="divider"></div>
+
+        <div>
+          <FrontPageHistory />
+        </div>
       </section>
     </>
   )

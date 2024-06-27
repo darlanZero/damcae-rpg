@@ -18,14 +18,16 @@ const FrontPageHeader = () => {
         <div className='hero-overlay bg-opacity-60'></div>
         <div className='hero-content text-center text-neutral-content'>
           <div className='max-w-md mx-auto'>
-            <h1 className='mb-5 text-5xl font-bold'>
-              DAMCAE Project
+            <h1 className='mb-2 text-5xl font-bold'>
+              Planeta Damcae
             </h1>
-            <p className='mb-5 text-white'>
-              Um jogo de Whatsapp do tipo RPG semitextual criado para sua diversão e desafio.
+            <p className=' text-white'>
+              "Em uma era distante, onde reis governavam suas terras de forma autoritária e sempre agressiva, 
+              onde os seres eram pura energia em seus corpos físicos, pouco se assemelhando aos corpos humanos, 
+              mas com certas características idênticas, bípedes e racionais… Até certo ponto."
             </p>
             <button className='btn btn-primary'>
-              Get Started
+              Inicie sua Jornada
             </button>
           </div>
         </div>

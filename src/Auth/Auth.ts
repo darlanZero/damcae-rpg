@@ -17,7 +17,7 @@ export async function HandleLogin(email: string, password: string) {
     try {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
-      console.log(user);
+      console.log(user.email, user.uid, user.displayName, user.photoURL);
     } catch (error) {
       if (error instanceof Error) {
         const errorCode = error.name;

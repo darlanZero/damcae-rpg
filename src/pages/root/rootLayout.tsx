@@ -4,10 +4,10 @@ import LeftSidebar from "../../components/LeftSidebar"
 const RootLayout = () => {
   return (
     <>
-        <div className="flex h-screen font-title">
+        <div className="flex h-full font-title">
           <LeftSidebar />
           <div className="flex flex-col w-full">
-            <div className="w-full">
+            <div className="w-full mb-14">
               <Navbar />
             </div>
 
