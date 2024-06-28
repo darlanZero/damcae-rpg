@@ -3,6 +3,7 @@ import { onAuthStateChanged, signOut, User } from "firebase/auth"
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { auth } from "../../firebase"
+import Logo from '../assets/neptune.png'
 
 const Navbar = () => {
 
@@ -42,12 +43,30 @@ const Navbar = () => {
 
   return (
     <div className='navbar root-bg bg-opacity-15 fixed z-[1] outline outline-1 outline-slate-800'>
-        <div className='navbar-start mr-10'>
-            <a className="btn btn-ghost normal-case text-xl">DAMCAE</a>
+        <div className='navbar-start mr-1'>
+            <div className="hidden md:block">
+                <a 
+                    className="btn btn-ghost normal-case text-xl"
+                    href="/"
+                >
+                    DAMCAE
+                </a>
+            </div>
+            <div className="block md:hidden">
+                <a 
+                    href="/" 
+                    className="btn btn-ghost text-xl"
+                >
+                    <img 
+                        src={Logo} alt="Logo" 
+                        className="w-10 h-10"
+                    />
+                </a>
+            </div>
         </div>
 
         
-        <div className="navbar-end flex max-w-fit gap-2">
+        <div className="navbar-end flex justify-start w-fit mr-28 lg:ml-96 lg:justify-end">
             <a className="btn btn-outline mr-2">Mudar Tema</a>
 
             {user ? (

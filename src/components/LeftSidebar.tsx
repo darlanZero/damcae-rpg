@@ -3,8 +3,8 @@ import  { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 const LeftSidebar = () => {
-
     const [isExpanded, setIsExpanded] = useState(false)
+
     const [isDropdownOpen, setIsDropdownOpen] = useState(false)
     const navigate = useNavigate()
     const handleToggle = () => {

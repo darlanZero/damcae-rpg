@@ -13,3 +13,9 @@ declare interface ProfileUpdatesInterface {
     textContent: string;
     imageContent?: string;
   }
+
+  declare interface ModalInterface {
+    children: React.ReactNode;
+    title?: string;
+    onClose: () => void;
+  }

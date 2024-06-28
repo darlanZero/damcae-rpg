@@ -6,7 +6,9 @@ const Frontpage = () => {
   return (
     <>
       <section>
-        <FrontPageHeader />
+        <div>
+          <FrontPageHeader />
+        </div>
         <div className="divider"></div>
 
         <div>

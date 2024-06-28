@@ -13,7 +13,7 @@ const CardHistory: React.FC<CardHistoryInterface> = ({title, textContent, imageC
 
             {imageContent && (
                 <div className="">
-                    <img src={imageContent} alt={title} className="w-full h-80 object-cover rounded border border-slate-950" />
+                    <img src={imageContent} alt={title} className="w-full h-36 md:h-80 object-fill md:object-cover  rounded border border-slate-950" />
                 </div>
             )}
 

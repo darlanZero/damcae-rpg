@@ -94,9 +94,26 @@ export default {
         "text": ["Quicksand", "serif"],
         'playwrite-slovenko': ["Playwrite SK", "sans-serif"],
       },
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: 0 },
+          "100%": { opacity: 1 },
+        },
+        scaleUp: {
+          "0%": { transform: "scale(0.95)" },
+          "100%": { transform: "scale(1)" },
+        },
+        scaleDown: {
+          "0%": { transform: "scale(1)" },
+          "100%": { transform: "scale(0.95)" },
+        }
+      },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "fade-in": "fadeIn 0.2s ease-out",
+        "scale-up": "scaleUp 0.2s ease-out",
+        "scale-down": "scaleDown 0.2s ease-out",
       },
     },
   },
