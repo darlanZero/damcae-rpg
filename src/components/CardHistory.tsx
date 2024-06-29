@@ -1,23 +1,32 @@
 import React from "react"
 
 
-const CardHistory: React.FC<CardHistoryInterface> = ({title, textContent, imageContent}) => {
+const CardHistory: React.FC<CardHistoryInterface> = ({title, content}) => {
   return (
-    <div className='card bg-richBlack-1 w-full shadow-xl'>
+    <div className='HistoryCardWrapper'>
         <div className='card-body'>
             {title && (
-                <h2 className='card-title flex text-center items-center justify-center font-title'>
+                <h2 className='HistoryCardTitle'>
                     {title}
                 </h2>
             )}
 
-            {imageContent && (
-                <div className="">
-                    <img src={imageContent} alt={title} className="w-full h-36 md:h-80 object-fill md:object-cover  rounded border border-slate-950" />
+            {content.map((item, i) => (
+                <div key={i}>
+                    {item.imageContent && (
+                        <div className="md:flex md:text-center md:items-center md:justify-center">
+                            <img src={item.imageContent} alt={item.altName} className='HistoryCardContentImage' />
+                        </div>
+                    )}
+                    {item.textContent && (
+                        <div className="HistoryCardContentTextWrapper text-indent-1">
+                            <p className='first-letter:uppercase first-letter:text-2xl first-letter:text-emerald-800 first-letter:font-title'>
+                                {item.textContent}
+                            </p>
+                        </div>
+                    )}
                 </div>
-            )}
-
-            <p>{textContent}</p>
+            ))}
 
         </div>
     </div>

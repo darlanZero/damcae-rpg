@@ -85,7 +85,7 @@ const LeftSidebar = () => {
                             </button>
                         </div>
                         : 
-                        <div className="flex flex-col p-4 gap-4 absolute justify-center items-center">
+                        <div className="flex flex-col p-4 gap-4 fixed justify-center items-center">
                             <button
                                 onClick={() => navigate("/")}
                                 className="btn btn-ghost btn-circle"
@@ -99,7 +99,7 @@ const LeftSidebar = () => {
                             <FolderSymlinkIcon />
                             </button>
                             {isDropdownOpen && (
-                                <div className='bg-black-2 transition-all duration-75  ease-out rounded shadow-md p-2 ml-20 mt-40 w-50 z-[1] absolute'>
+                                <div className='bg-black-2 transition-all duration-75 ease-out rounded shadow-md p-2 mr-20 mt-40 w-50 z-50 absolute'>
                                     {systems.map((system, index) => (
                                         <div key={index}
                                             className='px-2 rounded-sm py-2 hover:bg-gray-950'

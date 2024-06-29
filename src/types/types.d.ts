@@ -10,8 +10,11 @@ declare interface ProfileUpdatesInterface {
 
   declare interface CardHistoryInterface {
     title?: string;
-    textContent: string;
-    imageContent?: string;
+    content: {
+      textContent: string;
+      imageContent?: string;
+      altName?: string;
+    }[];
   }
 
   declare interface ModalInterface {

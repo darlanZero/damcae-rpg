@@ -85,6 +85,18 @@ export default {
           1: "#11151C",
         }
       },
+      textIndent: {
+        1: '1rem',
+        2: '2rem',
+        3: '3rem',
+        4: '4rem',
+        5: '5rem',
+        6: '6rem',
+        7: '7rem',
+        8: '8rem',
+        9: '9rem',
+        10: '10rem',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         "green-gradient": "linear-gradient(90deg, #01797A 0%, #489399 100%)",
@@ -117,8 +129,18 @@ export default {
       },
     },
   },
+  variants: {
+    textIndent: ['responsive', 'hover', 'focus'],
+  },
   plugins: [
     daisyui,
+    function({ addUtilities }) {
+      addUtilities({
+        '.text-indent-1': {
+          'textIndent': '1rem',
+        }
+      }, ['responsive'])
+    }
   ],
 }
 
