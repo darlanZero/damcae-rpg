@@ -17,6 +17,25 @@ declare interface ProfileUpdatesInterface {
     }[];
   }
 
+  declare interface CardRaceInterface {
+    header: {
+      title: string;
+      banner: string;
+      altName: string;
+    },
+    content: {
+      description: string;
+      powerDescription: string;
+      initialLevelPower: string;
+      observation?: string;
+      bonus?: string[];
+      powerUpLevels?: {
+        Level: number;
+        Description: string;
+      }[]
+    }
+  }
+
   declare interface ModalInterface {
     children: React.ReactNode;
     title?: string;

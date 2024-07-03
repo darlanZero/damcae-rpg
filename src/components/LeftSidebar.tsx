@@ -1,6 +1,7 @@
-import { BookHeartIcon, ChevronUpSquare, FolderSymlinkIcon, HomeIcon, Minus, PlusCircle, ShieldPlusIcon, SparklesIcon, SquareMenuIcon, SwordsIcon } from 'lucide-react'
+import { BookHeartIcon, ChevronUpSquare, FolderSymlinkIcon, HomeIcon, Minus, PlusCircle, ShieldHalfIcon, ShieldPlusIcon, SparklesIcon, SquareMenuIcon, SwordsIcon } from 'lucide-react'
 import  { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import FoxIcon from '../assets/fox-furry-icon.svg'
 
 const LeftSidebar = () => {
     const [isExpanded, setIsExpanded] = useState(false)
@@ -79,6 +80,22 @@ const LeftSidebar = () => {
                                 </div>
                             )}
 
+                            <button 
+                                className='btn btn-ghost'
+                                onClick={() => navigate("/races")}
+                            >
+                                <img src={FoxIcon} alt="Raças" className='w-10 h-10'/>
+                                <p>Raças</p>
+                            </button>
+
+                            <button 
+                                className='btn btn-ghost'
+                                onClick={() => navigate("/classes")}
+                            >
+                                <ShieldHalfIcon />
+                                <p>Classes</p>
+                            </button>
+
                             <button className='btn btn-ghost'>
                                 <SquareMenuIcon />
                                 <p>Ficha</p>
@@ -110,6 +127,20 @@ const LeftSidebar = () => {
                                     ))}
                                 </div>
                             )}
+
+                            <button 
+                                className='btn btn-ghost btn-circle'
+                                onClick={() => navigate("/races")}
+                            >
+                                <img src={FoxIcon} alt="Raças" className='w-10 h-10' />
+                            </button>
+
+                            <button 
+                                className='btn btn-ghost btn-circle'
+                                onClick={() => navigate("/classes")}
+                            >
+                                <ShieldHalfIcon />
+                            </button>
 
                             <button className='btn btn-ghost btn-circle'>
                                 <SquareMenuIcon />
