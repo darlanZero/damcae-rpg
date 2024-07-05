@@ -37,47 +37,57 @@ const CardRaces: React.FC<CardRaceInterface> = ({header, content}) => {
                 {content.initialLevelPower}: {content.powerDescription}
               </p>
 
-              <div className='badge badge-info gap-2'>
-                <Redo2Icon />
-                <p className='text-richBlack-1'>
-                  {content.observation}
-                </p>
+              <div className='card-actions justify-center lg:justify-start gap-4 p-4'>
+                <div className='tooltip tooltip-open tooltip-bottom lg:tooltip-right z-0  gap-2' data-tip={content.observation}>
+                  <button className='text-richBlack-1 btn-success btn btn-outline'>
+                    <Redo2Icon />
+                  </button>
+                </div>
               </div>
             </div>
           </div>
         )}
 
-        {content.powerUpLevels && content.bonus && (
-          <div className='card-body flex items-center text-center'>
+      <div className='card-body flex items-center text-center'>
+
+        {content.powerUpLevels && (
+          <div className='flex flex-col gap-2 p-2 text-justify'>
             <h3 className='card-title font-title text-2xl md:text-4xl'>
-              Poderes e seus bonus
+              Poderes
             </h3>
-
-            <p className='flex flex-col gap-2 p-2 text-justify'>
-              {content.powerUpLevels.map((power, i) => (
-                <p key={i}>
-                  <strong>
-                    Nível: 
-                  </strong>
-                  {power.Level}
-                  <br />
-
-                  <strong>
-                    Descrição:
-                  </strong>
-                  {power.Description}
-                </p>
-              ))}
-            </p>
-
-            <div className='badge flex badge-info badge-outline gap-2 p-2'>
-              <p>
-                {content.bonus}
+            
+            {content.powerUpLevels.map((power, i) => (
+              <p key={i}>
+                <strong>Nível:</strong> {power.Level}<br />
+                <strong>Descrição:</strong> {power.Description}
               </p>
-                
-            </div>
+            ))}
           </div>
         )}
+
+        {content.powerUpLevels && content.bonus && (
+          <div className='divider'></div>
+        )}
+
+        {content.bonus && (
+          <>
+            <h3 className='card-title capitalize font-title text-2xl md:text-4xl'>
+              bonus
+            </h3>
+
+            <ul className='timeline timeline-vertical lg:timeline-horizontal'>
+              {content.bonus.map((item, i) => (
+                <li key={i}>
+                  <div className={`timeline-box ${i % 2 === 0 ? 'timeline-start' : 'timeline-end'}`}>
+                    <p>{item}</p>
+                  </div>
+                  <hr />
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
+      </div>
     </div>
   )
 }
